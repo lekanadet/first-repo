@@ -1,0 +1,4 @@
+10  C -  50.0  F
+-20  C -  -4.0  F
+-289  C -  That temperature doesn't make sense!  F
+100  C -  212.0  F
