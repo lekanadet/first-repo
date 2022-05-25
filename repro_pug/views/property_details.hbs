@@ -1,0 +1,133 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+        
+</head>
+
+<div class="container">
+  <h1>PROPERTY DETAILS</h1>
+  <form action="/book-tour" method="POST">
+            <fieldset>
+                                
+         
+                <br/>
+                <label for="firstname">Firstname </label>
+                 <br/>
+                <input type="text" id="firstname" name="firstname"  />
+                <br/>
+
+                <label for="lastname">Lastname </label>
+                 <br/>
+                <input type="text" id="lastname" name="lastname"  />
+
+                <br/>
+                <label for="email">Email </label>
+                <br/>
+                <input type="text" id="email" name="email"  />
+                <br/>
+
+                <br/>
+                <label for="phone_no">Phone Number </label>
+                <br/>
+                <input type="text" id="phone_no" name="phone_no"  />
+                <br/>
+
+                
+                <label for="date">Date </label>
+                <br/>
+                <input type="datetime" id="date" name="date"  />
+                <br/>
+
+                <p>I would like to ..... </p>
+
+                <label for="tour_person"> Tour in Person</label>
+                <input type="checkbox" id="tour_person" name="tour_person" value="Person">
+                
+
+                <label for="tour_video"> Tour via Video Call</label>
+                <input type="checkbox" id="tour_video" name="tour_video" value="Video">
+
+
+                <br/>
+                <input type="submit" value="Schedule Tour" />
+                <br/>
+               
+            </fieldset>
+        </form>
+  <h2></h2>
+        
+       {{#each data1}}
+   
+                <p>{{this.purpose}}</p>
+                <p>{{this.name}}</p>
+                <p>{{this.price}}</p>
+                <p>{{this.street}}</p>
+                <p>{{this.town}}</p>
+                <p>{{this.bed}}</p>
+                <p>{{this.bath}}</p>
+                <p>{{this.picture}}</p>
+                <p>{{this.picture_count}}</p>
+                <p>{{this.property_description}}</p>  
+               
+        {{/each}}
+
+ </br>
+ </br>   
+       
+        {{#each data2}}
+
+                <p>{{this.picture}}</p>
+
+        {{/each}}
+ 
+</br>
+</br>
+
+        {{#each data3}}
+                <p>{{this.picture2}}</p>
+  
+        {{/each}}
+</br>
+</br>
+
+        {{#each data4}}
+                <p>{{this.picture3}}</p>
+  
+        {{/each}}
+</br>
+</br>       
+       {{#each data5}}
+
+                <p>{{this.furnished}}</p>
+                <p>{{this.serviced}}</p>
+                <p>{{this.dishwasher}}</p>
+                <p>{{this.extractor}}</p>
+   
+        {{/each}}
+ 
+</br>
+</br> 
+
+     {{#each data6}}
+
+                <p>{{this.events_date}}</p>
+                <p>{{this.property_events}}</p>
+                <p>{{this.price_update}}</p>
+   
+        {{/each}}
+
+</br>
+</br> 
+
+        {{#each data7}}
+                <p>{{this.floor1_plan_url}}</p>
+                <p>{{this.key_name}}</p>
+  
+        {{/each}}
+</br> 
+     
+
+        <p><a href="/index-pymt/{{id}}" class="btn btn-info btn-sm">Pay</a>     </p>
+
+    
+ 
+</div>

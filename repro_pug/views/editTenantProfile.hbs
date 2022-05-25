@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>{{title}} </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+    <body>
+        {{#each data}}
+        <form action="/upload-tenant-profile-picture" method="POST" enctype="multipart/form-data">
+
+
+            <fieldset>
+                 
+                <img src ={{this.picture}}> 
+        
+                 <input type="file" name="profile_upload"/>
+                 <br/>
+                <input type="submit" value="Change Profile Picture" />
+                 
+              
+            </fieldset>
+        </form>
+         {{/each}}
+
+
+        <form action="/update-user-phone-number" method="POST">
+
+
+            <fieldset>
+                {{#each data}} 
+                <label for="firstname">Firstname: </label>
+                <br/>
+                <input type="text" id="firstname" name="firstname" value="{{this.firstname}}" readonly/>
+                <br/>
+                <label for="lastname">Lastname: </label>
+                <br/>
+                <input type="text" id="lastname" name="lastname" value="{{this.lastname}}" readonly/>
+                <br/>
+                <label for="email">Email: </label>
+                 <br/>
+                <input type="text" id="email" name="email" value="{{this.email}}" readonly/>
+                <br/>
+                <label for="text">Phone Number: </label>
+                <br/>
+                <input type="text" id="phone_no" name="phone_no" value="{{this.phone_no}}" />
+                </br>
+                <input type="submit" value="Save" />
+                <br/>
+               {{/each}}
+            </fieldset>
+        </form>
+    </body>
+</html>

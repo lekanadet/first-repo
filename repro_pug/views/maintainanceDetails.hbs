@@ -1,0 +1,54 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+        
+</head>
+
+<div class="container">
+  <h1>MAINTAINANCE DETAILS</h1>
+  <h2></h2>
+
+        </br>
+        </br>
+        </br>
+       {{#each data}}
+      <p><b>{{this.title}}</b>                    {{this.importance}}         {{this.status}}</p>
+      </br>
+      <p><b>YOU   ON</b> {{this.created_date}}</p>
+      
+      <p>{{this.message}}</p>
+      {{/each}}
+       <p><img src ={{image}}></p>
+      </br>
+
+</br>
+        
+       {{#each data2}}
+       <hr>
+      <p><b>{{this.sender}}    ON</b> {{this.comment_time}}</p>
+      
+      <p>{{this.comment}}</p>
+        <hr>
+        {{/each}}
+
+</br>
+ 
+
+</br>
+</br>
+</br>
+{{#each data}}
+<form action="/send-comment/{{this.id}}" method="POST">
+     
+            <fieldset>
+                <label for="text">Comment: </label>
+                <br/>
+                <input type="textarea" id="comment" name="comment"  />
+                <br/>
+                <input type="submit" value="Send" />
+                <br/>
+               
+            </fieldset>
+            
+        </form>
+  {{/each}}
+</div>

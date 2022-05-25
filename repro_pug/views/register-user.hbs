@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title> test </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+    <body>
+        <form action="/register-user" method="POST">
+            <fieldset>
+                <br/>
+                <label for="firstname">Firstname: </label>
+                <br/>
+                <input type="name" id="firstname" name="firstname"  />
+                <br/>
+                <label for="lastname">lastname: </label>
+                <br/>
+                <input type="name" id="lastname" name="lastname"  />
+                <br/>
+                <label for="email">Email: </label>
+                 <br/>
+                <input type="email" id="email" name="email"  />
+                <br/>
+                <label for="email">phone No: </label>
+                <br/>
+                <input type="textbox" id="phone_no" name="phone_no"  />
+                <br/>
+                <label for="account_type">Account_type </label>
+                <select name="account_type"> 
+                   
+                  <option>Landlord</option>  
+                  <option>Tenant</option> 
+                  <option>Agent</option> 
+                    
+                </select>
+                <br/>
+                <label for="username">Password: </label>
+                <br/>
+                <input type="textbox" id="password" name="password" />
+                <br/>
+                <input type="submit" value="Register" />
+                <br/>
+               
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<p>{{name}}</p>
+<p><a href="/landlord-home">Landlord Dashboard</a></p>
+<p><a href="/tenant-home">Tenant Dashboard</a></p>
+<p><a href="/log-out">log out</a></p>
+<div class="container">
+  <h1>HOMEPAGE</h1>
+  <h2></h2>
+  
+
+
+
+  
+  <br /><br />
+   <br /><br />
+  <table class="table">
+  
+      {{#each Pictures}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.price}}</td>
+                <td><img src ={{this.picture}}></td>
+                <td>{{this.property_type}}</td>
+                <td>{{this.town}}</td>
+                <td>{{this.street}}</td>
+                <td>{{this.bed}}</td>
+                <td>{{this.bath}}</td>
+                <td> <a href="/unfavorited/{{this.id}}" class="btn btn-info btn-sm">Unlike</a></td>
+            </tr>
+        {{/each}}
+
+   
+ 
+  </table>
+
+    <br /><br />
+     <br /><br />
+  <table class="table">
+  
+      
+         {{#each Video}}
+            <tr>
+                <td>{{this.video}}</td>
+            </tr>
+        {{/each}}
+        
+      </tr>
+
+   
+ 
+  </table>
+
+  <br /><br />
+  <br /><br />
+
+  <table class="table">
+  
+      {{#each Comment}}
+            <tr>
+                <td>{{this.comment_id}}</td>
+                <td>{{this.user_id}}</td>
+                <td>{{this.comment}}</td>
+                <td>{{this.name}}</td>
+                <td><img src ={{this.pic_url}}></td>
+            </tr>
+        {{/each}}
+
+ 
+  </table>
+  <p><a href="/agent-page">Agent Page</a></p>
+  <p></p>
+
+</div>

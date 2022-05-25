@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+
+                
+<p>
+  <label>Your Properties:</label>
+  
+  <select name="property"> 
+      {{#each property_data}} 
+<option value={{this.id}}> <a href="/get-landlord-maintainance-list">{{this.address}}</a></option>
+    {{/each}}   
+  </select>
+  
+</p>
+
+</head>
+{{#each property_data}}
+<p><a href="/get-landlord-maintainance-list/{{this.id}}">{{this.address}}</a></p>
+{{/each}}

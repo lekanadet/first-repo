@@ -1,0 +1,63 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+
+                
+<p>
+  <label>Your Properties:</label>
+  
+  <select name="property"> 
+      {{#each property_data}} 
+<a href="/get-landlord-maintainance-list" class="btn btn-danger btn-sm"><option value={{this.id}}> {{this.address}}</option> </a>
+    {{/each}}   
+  </select>
+  
+</p>
+ 
+        
+</head>
+
+<div class="container">
+  <h1>MAINTAINANCE</h1>
+  <h2></h2>
+
+   
+    <table class="table">
+      {{#each maintainance_list_data}}
+    <tr><b>
+                  <th>
+                    
+                  </th>
+
+                  <th>
+                    
+                  </th>
+
+                  <th>
+                    {{this.title}}
+                  </th>
+
+                  <th>
+                    Updated
+                  </th>
+
+                  <th>
+                    Importance
+                  </th>
+                </tr>
+
+       
+   </b>
+            <tr>
+                <td>{{this.picture_url}}</td>
+                <td>{{this.address}}</td>
+                <td>created by {{this.firstname}} on {{this.created_date}}</td>
+                <td>{{this.total}}</td>
+                <td>{{this.importance}}</td>
+                <td> <a href="/get-landlord-maintainance-details/{{this.maintainance_id}}" class="btn btn-danger btn-sm">View</a> </td>
+            </tr>
+        {{/each}}
+ 
+  </table>
+
+  
+</div>

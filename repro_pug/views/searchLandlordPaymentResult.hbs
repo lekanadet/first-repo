@@ -1,0 +1,80 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+<form action="/search-landlord-payments" method="GET">
+     
+            <fieldset>
+              
+                <br/>
+                <input type="text" id="search_string" name="search_string"  placeholder="Search Payments"/>
+                <br/>
+                <input type="submit" value="Search" />
+                <br/>
+               
+            </fieldset>
+            
+        </form>
+
+       
+        
+</head>
+
+<div class="container">
+  <h1>LANDLORD PAYMENTS SEARCH RESULTS</h1>
+  <h2></h2>
+
+        </br>
+        </br>
+    
+
+</br>
+
+        <table class="table">
+                <tr>
+                  <th>
+                    Payment ID
+                  </th>
+
+                  <th>
+                    Tenant
+                  </th>
+
+                  <th>
+                    Property
+                  </th>
+
+                  <th>
+                    Amount
+                  </th>
+
+                  <th>
+                    Date
+                  </th>
+
+                  <th>
+                    Actions
+                  </th>
+                </tr>
+
+            {{#each data}}
+            
+              <tr>
+                <hr>
+                <td>{{this.payment_id}}</td>
+                <td>{{this.firstname}}</td>
+                <td>{{this.address}}</td>
+                <td>{{this.amount}}</td>
+                <td>{{this.date}}</td>
+                <td>  <a href="/print">print</a>
+                      <a href="/download-file/{{this.receipt_name}}">download</a>
+                </td>
+                <hr>
+              </tr>
+              
+              {{/each}}
+ 
+  </table>
+</br>
+
+</div>

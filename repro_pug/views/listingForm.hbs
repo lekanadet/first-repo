@@ -1,0 +1,372 @@
+<html>
+<head>
+    <title> test </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+    <body>
+        <form action="/listing" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <h1><p>Add Your Property Details</p></h1>
+                <p><h5>Property Details</h5></p>
+            
+                </br>
+                <label for="property_type">Property Type </label>
+                <select name="property_type"> 
+                    {{#each property_type}}
+                  <option >{{this.property_type_name}}</option>  
+                    {{/each}}  
+                </select>
+                </br>
+                <label for="Property_tag">Property Tag </label>
+                <select name="property_tag"> 
+                   
+                  <option>A Spacious</option>  
+                  <option>A Luxurious</option> 
+                  <option>One of a Kind</option> 
+                    
+                </select>
+                
+                <br/>
+                <label for="street_name">Street Name </label>
+                <input type="text" id="street_name" name="street_name"  />
+                <br/>
+                <label for="long">Longitude </label>
+                <input type="text" id="long" name="long"  />
+                <br/>
+                <label for="lat">Latitude </label>
+                <input type="text" id="lat" name="lat"  />
+                <br/>
+                <label for="lga">LGA </label>
+                <input type="text" id="lga" name="lga"  />
+                <br/>
+                <label for="state">STATE </label>
+                <input type="text" id="state" name="state"  />
+                <br/>
+                <label for="country">Country </label>
+                <input type="text" id="country" name="country"  />
+                <br/>
+
+                <p><h5>Purpose</h5></p>
+                </br>
+                <label for="rent"> Rent</label>
+                <input type="checkbox" id="rent" name="purpose" value="Rent">
+
+                <label for="sale"> Sale</label>
+                <input type="checkbox" id="rent" name="purpose" value="Sale"> 
+
+                <label for="short_let"> Short Let</label>
+                <input type="checkbox" id="short_let" name="purpose" value="Short let">
+                <br/>
+
+                <p><h5>Property Description</h5></p>
+                </br>         
+                <label for="property_description">Property Description</label><br/>
+                <textarea id="property_description" name="property_description" rows="4" cols="50"></textarea>
+                <br/>
+                <label for="bed">Beds </label>
+                <input type="text" id="bed" name="bed"  />
+                <br/>
+                 <label for="bath">Baths </label>
+                <input type="text" id="bath" name="bath"  />
+                <br/>
+                 <label for="sqft">Sqft </label>
+                <input type="text" id="sqft" name="sqft"  />
+                <br/>
+                 <label for="acres">Acres </label>
+                <input type="text" id="acres" name="acres"  />
+                <br/>
+                <label for="year_built">Year Built </label>
+                <input type="text" id="year_built" name="year_built"  />
+                <br/>
+                <label for="floors">Floors </label>
+                <input type="text" id="floors" name="floors"  />
+                <br/>
+                <label for="furnished"> Furnished</label>
+                <input type="checkbox" id="furnished" name="furnished" value="yes">
+
+                <label for="serviced"> Serviced</label>
+                <input type="checkbox" id="serviced" name="serviced" value="yes"> 
+
+                <label for="newly_built">Newly Built</label>
+                <input type="checkbox" id="newly_built" name="newly_built" value="yes">
+                <br/>
+
+                <p><h5>Property Features</h5></p>
+                </br>
+                <label for="air_conditioning">Air Conditioning: </label>
+                <select name="air_conditioning"> 
+                   
+                  <option>Split</option>  
+                  <option>Central</option> 
+                  <option>Standing</option> 
+                    
+                </select>
+                
+                <label for="washer">Washer </label>
+                <select name="washer"> 
+                   
+                  <option>Engraved</option>  
+                  <option>Stand Alone</option> 
+                  <option>Mass Washer</option> 
+                    
+                </select>
+                
+                <label for="parking">Parking </label>
+                <select name="parking"> 
+                   
+                  <option>Underground</option>  
+                  <option>Garage</option> 
+                  <option>Compound</option> 
+                  <option>House Front Parking</option>
+                    
+                </select>
+                </br>
+
+                <label for="dish_washer">DishWasher</label>
+                <input type="checkbox" id="dish_washer" name="dish_washer" value="yes">
+                
+
+                <label for="electric_fence">Electric Fence</label>
+                <input type="checkbox" id="electric_fence" name="electric_fence" value="yes">
+                
+
+                <label for="deck">Deck</label>
+                <input type="checkbox" id="deck" name="deck" value="yes">
+                
+
+                <label for="storage">Storage</label>
+                <input type="checkbox" id="storage" name="storage" value="yes">
+                </br>
+
+                <label for="alarm">Alarm</label>
+                <input type="checkbox" id="alarm" name="alarm" value="yes">
+                
+
+                <label for="cctv">CCTV</label>
+                <input type="checkbox" id="cctv" name="cctv" value="yes">
+               
+
+                <label for="freezer">Freezer</label>
+                <input type="checkbox" id="freezer" name="freezer" value="yes">
+                
+
+                <label for="water_heater">Water Heater</label>
+                <input type="checkbox" id="water_heater" name="water_heater" value="yes">
+                </br>
+
+                <label for="pool">Pool</label>
+                <input type="checkbox" id="pool" name="pool" value="yes">
+                
+
+                <label for="garden">Garden</label>
+                <input type="checkbox" id="garden" name="garden" value="yes">
+                
+
+                <label for="exhaust_fan">Exhaust Fan</label>
+                <input type="checkbox" id="exhaust_fan" name="exhaust_fan" value="yes">
+                
+
+                <label for="fire_place">Fire Place</label>
+                <input type="checkbox" id="fire_place" name="fire_place" value="yes">
+                </br>
+
+                <label for="security_post">Security Post</label>
+                <input type="checkbox" id="security_post" name="security_post" value="yes">
+                
+
+                <label for="heat_extractor">Heat Extractor</label>
+                <input type="checkbox" id="heat_extractor" name="heat_extractor" value="yes">
+                
+
+                <label for="balcony">Balcony</label>
+                <input type="checkbox" id="balcony" name="balcony" value="yes">
+                
+
+                <label for="garbage_disposer">Garbage Disposer</label>
+                <input type="checkbox" id="garbage_disposer" name="garbage_disposer" value="yes">
+                <br/>
+
+                <label for="pet">Pets</label>
+                <input type="text" id="pet" name="pet">
+                <br/>
+                <p><h5>Pricing</h5></p>
+                </br>
+
+                <label for="amount">Amount</label>
+                <input type="text" id="amount" name="amount">
+                <br/>
+
+                <label for="amount">Min Duration </label>
+                <select name="min_duration"> 
+                   
+                  <option>1 month</option>  
+                  <option>6 months</option> 
+                  <option>1 year</option> 
+                  <option>2 years</option> 
+                    
+                </select>
+
+                <label for="frequency">Frequency </label>
+                <select name="frequency"> 
+                   
+                  <option>1 month</option>  
+                  <option>6 months</option> 
+                  <option>1 year</option> 
+                  <option>2 years</option> 
+                    
+                </select>
+                </br>
+                
+                <p><h5>Installmental Payment</h5></p>
+                </br>
+
+                <label for="least_deposit">Least Deposit</label>
+                <input type="text" id="" name="least_deposit">
+                
+
+                <label for="least_monthly_payment">Least Monthly Payment</label>
+                <input type="text" id="" name="least_monthly_payment">
+                
+
+                <label for="max_duration">Max Payment Duration</label>
+                <input type="text" id="" name="max_duration">
+                </br>
+
+                <p><h5>Lease Oppurtunity</h5></p>
+                </br>
+
+                <label for="lease_value">Lease Value</label>
+                <input type="text" id="" name="lease_value">
+                
+
+                <label for="lease_duration">Duration</label>
+                <input type="text" id="" name="lease_duration">
+                
+
+                <label for="lease_deposit">Deposit</label>
+                <input type="text" id="" name="lease_deposit">
+                <br/>
+
+                <p><h5>Rent To Own Mortagage Oppurtunity</h5></p>
+                </br>
+                
+
+                <label for="rto_mortgage_value">Rto Mortgage Value</label>
+                <input type="text" id="" name="rto_mortgage_value">
+                
+
+                <label for="rto_mortgage_duration">Duration</label>
+                <input type="text" id="" name="rto_mortgage_duration">
+                <br/>
+
+                <p><h5><b> Mortagage Oppurtunity</h5></b></p>
+
+                <label for="mortgage_value">Mortgage Value</label>
+                <input type="text" id="" name="mortgage_value">
+                
+
+                <label for="mortgage_duration">Duration</label>
+                <input type="text" id="" name="mortgage_duration">
+
+                <label for="mortgage_down_payment">Down Payment</label>
+                <input type="text" id="" name="mortgage_down_payment">
+                <br/>
+
+                <p><h5>Utilities</h5></p>
+                </br>
+
+                <table class="table">
+                <tr>
+                  <th>
+                    Who Pays
+                  </th>
+
+                  <th>
+                    Landlord
+                  </th>
+
+                  <th>
+                    Tenant
+                  </th>
+
+                  <th>
+                    N/A
+                  </th>
+                </tr>
+
+              <tr>
+                <td>Cable TV</td>
+                <td> <input type="checkbox" id="cable_tv" name="cable_tv" value="landlord"> </td>
+                <td> <input type="checkbox" id="cable_tv" name="cable_tv" value="tenant"> </td>
+                <td> <input type="checkbox" id="cable_tv" name="cable_tv" value="N/A"> </td>
+              </tr>
+
+              <tr>
+                <td>Gas</td>
+                <td> <input type="checkbox" id="gas" name="gas" value="landlord"> </td>
+                <td> <input type="checkbox" id="gas" name="gas" value="tenant"> </td>
+                <td> <input type="checkbox" id="gas" name="gas" value="N/A"> </td>
+              </tr>
+
+              <tr>
+                <td>Electricity</td>
+                <td> <input type="checkbox" id="electricity" name="electricity" value="landlord"> </td>
+                <td> <input type="checkbox" id="electricity" name="electricity" value="tenant"> </td>
+                <td> <input type="checkbox" id="electricity" name="electricity" value="N/A"> </td>
+              </tr>
+
+              <tr>
+                <td>Water</td>
+                <td> <input type="checkbox" id="water" name="water" value="landlord"> </td>
+                <td> <input type="checkbox" id="water" name="water" value="tenant"> </td>
+                <td> <input type="checkbox" id="water" name="water" value="N/A"> </td>
+              </tr>
+
+              <tr>
+                <td>Sewage</td>
+                <td> <input type="checkbox" id="sewage" name="sewage" value="landlord"> </td>
+                <td> <input type="checkbox" id="sewage" name="sewage" value="tenant"> </td>
+                <td> <input type="checkbox" id="sewage" name="sewage" value="N/A"> </td>
+              </tr>
+
+              <tr>
+                <td>Garbage</td>
+                <td> <input type="checkbox" id="garbage" name="garbage" value="landlord"> </td>
+                <td> <input type="checkbox" id="garbage" name="garbage" value="tenant"> </td>
+                <td> <input type="checkbox" id="garbage" name="garbage" value="N/A"> </td>
+              </tr>
+ 
+  </table>
+
+   
+              </br>
+              <label for="property_picture">Upload property picture</label>
+              <input type="file" name="property_picture" multiple/>
+              </br>
+
+              <label for="property_video">Upload property video</label>
+              <input type="file" name="property_video"/>
+              </br>
+
+              <label for="floor_plan">Floor plan</label>
+              <input type="file" name="floor_plan"/>
+              </br>
+
+              <p><h5><b> Property History</h5></b></p>
+
+              <label for="event">Event</label>
+              <input type="text" id="event" name="event"/>
+
+              <label for="event_date">Event Date</label>
+              <input type="text" id="event_date" name="event_date"/> 
+
+              <label for="price_update">Price Update</label>
+              <input type="text" id="price_update" name="price_update"/> 
+
+              <button type="submit" class="btn btn-info">Upload Property</button>
+                
+            </fieldset>
+        </form>
+    </body>
+</html>

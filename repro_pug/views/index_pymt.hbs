@@ -1,0 +1,25 @@
+
+<html>
+<head>
+    <title> test </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<h1>One $1 Can Save a Life</h1>
+    <body>
+        <form action="/paystack-pay/{{id}}/{{id2}}/{{amount}}/{{id3}}" method="POST">
+            <fieldset>
+                <label for="fullname">Fullname: </label>
+                <input type="textbox" id="fullname" name="fullname" placeholder={{fullname}}/>
+                <br/>
+                <label for="amount">Amount: </label>
+                <input type="textbox" id="amount" name="amount" placeholder={{amount}}>
+                <br/>
+                <input type="submit" value="Pay" />
+                <br/>
+               
+            </fieldset>
+        </form>
+        <a href="/login-form-pymt" class="btn btn-info btn-sm">log Out</a>
+    </body>
+</html>                                                        

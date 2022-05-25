@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title> test </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+    <body>
+        <form action="/submit-new-maintainance-request/{{id}}" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                                
+                <br/>
+                <label for="title">Title: </label>
+                <br/>
+                <input type="text" id="title" name="title"  />
+                <br/>
+                <label for="Importance">Importance: </label>
+                 <br/>
+                <input type="text" id="Importance" name="importance"  />
+                <br/>
+                <label for="text">Message: </label>
+                <br/>
+                <input type="text" id="message" name="message"  />
+                <br/>
+                <label for="text">Attachment: </label>
+                <br/>
+                <div class="form-group">
+                <input type="file" name="upload"/>
+                <input type="file" name="upload"/>
+                <input type="file" name="upload"/>
+                </div>
+                <br/>
+                <input type="submit" value="Submit" />
+                <br/>
+               
+            </fieldset>
+        </form>
+    </body>
+</html>

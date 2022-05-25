@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+        
+</head>
+
+<div class="container">
+  <h1>SENT DETAILS</h1>
+  <h2></h2>
+ 
+      {{#each data1}}
+       <p>{{this.name}}</p>
+       {{/each}}
+
+       {{#each data}}
+       <p>{{this.title}}</p>
+       <p>{{this.submessage}}</p>
+       {{/each}}
+       <p>Message Body</p>
+
+     {{#each data1}} <p><b>{{this.name}}</b> [{{this.email}}]{{/each}}-------------------------------- {{#each data}}{{this.date}}</p>{{/each}}
+      </br>
+      {{#each data}}
+      <p><b>{{this.title}}</b></p>
+      {{/each}}
+      </br>
+      </br>
+      {{#each data}}
+      <p>{{this.message}}</p>
+      <td><img src = {{this.attachment_location}}></td>
+      </br>
+      {{/each}}
+         
+        
+
+

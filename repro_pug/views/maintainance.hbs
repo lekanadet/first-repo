@@ -1,0 +1,104 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+
+   
+     <form action="/new-maintainance-request" method="GET">
+     
+            <fieldset>
+                
+                <p>
+  <label>Linked Properties:</label>
+  
+  <select name="p"> 
+      {{#each data3}} 
+    <option value={{this.id}}>{{this.address}}</option> 
+    {{/each}}   
+  </select>
+  
+</p>
+ 
+                <br/>
+                <input type="submit" value="New Request" />
+                <br/>
+               
+            </fieldset>
+            
+        </form>
+        
+</head>
+
+<div class="container">
+  <h1>MAINTAINANCE</h1>
+  <h2></h2>
+
+   
+    <table class="table">
+    <tr>
+            <th><b>Submitted</b></th>
+            </tr>
+       {{#each data}}
+   
+            <tr>
+                <td><b>{{this.title}}</b></td>
+                <td>  </td>
+                 <td>  </td>
+                <td>{{this.Address}}</td>
+                <td>  </td>
+                 <td>  </td>
+                  <td>  </td>
+                   <td>  </td>
+                <td> <a href="/get-maintainance-details/{{this.maintainance_id}}" class="btn btn-danger btn-sm">View</a> </td>
+            </tr>
+        {{/each}}
+ 
+  </table>
+</br>
+</br>
+</br>
+   <table class="table">
+        <tr>
+            <th><b>In Progress</b></th>
+            </tr>
+       {{#each data1}}
+      
+            <tr>
+                <td><b>{{this.title}}</b></td>
+                <td>  </td>
+                 <td>  </td>
+                <td>{{this.Address}}</td>
+                <td>  </td>
+                 <td>  </td>
+                  <td>  </td>
+                   <td>  </td>
+                <td> <a href="/get-maintainance-details/{{this.maintainance_id}}" class="btn btn-danger btn-sm">View</a> </td>
+            </tr>
+        {{/each}}
+ 
+  </table>
+</br>
+</br>
+</br>
+   <table class="table">
+            <tr>
+            <th><b>Resolved</b></th>
+            </tr>
+       {{#each data2}}
+          
+            <tr>
+                <td><b>{{this.title}}</b></td>
+                <td>  </td>
+                 <td>  </td>
+                <td>{{this.Address}}</td>
+                <td>  </td>
+                 <td>  </td>
+                  <td>  </td>
+                   <td>  </td>
+                 <td> <a href="/get-maintainance-details/{{this.maintainance_id}}" >View </a></td>
+                 
+            </tr>
+        {{/each}}
+ 
+  </table>
+
+  
+</div>

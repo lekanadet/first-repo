@@ -1,0 +1,113 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+ <h1>MESSAGE</h1>
+  <h2></h2>
+   
+     <form action="/new-message/{{id}}" method="GET">
+     
+            <fieldset>
+                
+                <br/>
+                <input type="submit" value="New Message" />
+                <br/>
+               
+            </fieldset>
+            
+        </form>
+        
+</head>
+
+<div class="container">
+ 
+
+   
+    <table class="table">
+    <tr>
+            <th> <b>Inbox</b></a> </th>
+            </tr>
+       {{#each inbox}}
+   
+            <tr>
+                <td>{{this.sender}}</td>      
+                <td>  </td>
+                <td><a href="/get-inbox-details/{{this.id}}" class="btn btn-danger btn-sm">{{this.title}}</a></td>
+                <td>  </td>
+                <td>{{this.name}}</td>
+                <td>  </td>
+                <td>{{this.email}}</td>
+                 <td>  </td>
+                 <td>{{this.submessage}}</td>
+                 <td>  </td>
+                 <td>{{this.message}}</td>
+                  <td>  </td>
+                 <td>{{this.date}}</td>
+                  <td>  </td>
+                 <td><p><img src ={{this.attachment_location}}></p></td>
+                   <td>  </td>
+               
+            </tr>
+        {{/each}}
+ 
+  </table>
+</br>
+</br>
+</br>
+   <table class="table">
+         <tr>
+            <th> <b>Sent</b></a> </th>
+            </tr>
+            {{#each sent}}
+   
+            <tr>
+                <td>{{this.receiver}}</td>      
+                <td>  </td>
+                <td><a href="/get-sent-details/{{this.id}}" class="btn btn-danger btn-sm">{{this.title}}</a></td>
+                <td>  </td>
+                <td>{{this.name}}</td>
+                <td>  </td>
+                <td>{{this.email}}</td>
+                <td>  </td>
+                 <td>{{this.submessage}}</td>
+                 <td>  </td>
+                 <td>{{this.message}}</td>
+                  <td>  </td>
+                 <td>{{this.date}}</td>
+                  <td>  </td>
+                  <td><p><img src ={{this.attachment_location}}></p></td>
+                   <td>  </td>
+               
+            </tr>
+        {{/each}}
+ 
+  </table>
+</br>
+</br>
+</br>
+    <table class="table">
+         <tr>
+            <th> <b>Draft</b></a> </th>
+            </tr>
+            {{#each draft}}
+   
+            <tr>
+                <td>{{this.receiver}}</td>      
+                <td>  </td>
+                <td><a href="/get-inbox/{{this.id}}" class="btn btn-danger btn-sm">{{this.title}}</a></td>
+                <td>  </td>
+                <td>{{this.name}}</td>
+                <td>  </td>
+                 <td>{{this.submessage}}</td>
+                 <td>  </td>
+                 <td>{{this.message}}</td>
+                  <td>  </td>
+                 <td>{{this.date}}</td>
+                  <td>  </td>
+                  <td><img src ={{this.attachment_location}}></td>
+                   <td>  </td>
+               
+            </tr>
+        {{/each}}
+ 
+  </table>
+  
+</div>

@@ -1,0 +1,202 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+
+                
+<p>
+  <label>Your Properties:</label>
+  
+  <select name="property"> 
+      {{#each property_data}} 
+<option value={{this.id}}> <a href="/get-property-payment-charts">{{this.address}}</a></option>
+    {{/each}}   
+  </select>
+  
+</p>
+
+</head>
+{{#each property_data}}
+<p><a href="/get-property-payment-charts/{{this.id}}">{{this.address}}</a></p>
+{{/each}}
+
+<body>
+<form action="/get-payment-charts-by-year" method="GET">
+<fieldset>
+
+<label for="cars">Choose a car:</label>
+
+<select name="year" id="year">
+  <option disabled selected value> -- select an option -- </option>
+  <option value="2021">2021</option>
+  <option value="2020">2020</option>
+  <option value="2019">2019</option>
+  <option value="2018">2018</option>
+</select>
+<p><a href="/get-yearly-payment-charts/2021">2021</a></p>
+<p><a href="/get-yearly-payment-charts/2020">2020</a></p>
+<p><a href="/get-yearly-payment-charts/2019">2019</a></p>
+<p><a href="/get-yearly-payment-charts/2018">2018</a></p>
+</fieldset>
+</form>
+
+<div class="container">
+  <h1>PAYMENT CHARTS</h1>
+  <h2></h2>
+
+        </br>
+        </br>
+
+<table class="table">
+                <tr>
+                   <th>
+                    
+                  </th>
+
+                  <th>
+                    JAN
+                  </th>
+
+                  <th>
+                    FEB
+                  </th>
+
+                  <th>
+                    MAR
+                  </th>
+
+                  <th>
+                    APRIL
+                  </th>
+
+                  <th>
+                    MAY
+                  </th>
+
+                  <th>
+                    JUNE
+                  </th>
+
+                  <th>
+                    JULY
+                  </th>
+
+                  <th>
+                    AUGUST
+                  </th>
+
+                  <th>
+                    SEPTEMBER
+                  </th>
+
+                  <th>
+                    OCTOBER
+                  </th>
+
+                  <th>
+                    NOVEMBER
+                  </th>
+
+                  <th>
+                    DECEMBER
+                  </th>
+                </tr>
+]
+            
+              <tr>
+                <hr>
+                <td>charges</td>
+                 {{#each january_charges}} <td>{{this.v_january_charges}}</td> {{/each}}
+                 {{#each february_charges}} <td>{{this.v_february_charges}}</td> {{/each}}
+                 {{#each march_charges}} <td>{{this.v_march_charges}}</td> {{/each}}
+                 {{#each april_charges}} <td>{{this.v_april_charges}}</td> {{/each}}
+                 {{#each may_charges}} <td>{{this.v_may_charges}}</td> {{/each}}
+                 {{#each june_charges}} <td>{{this.v_june_charges}}</td> {{/each}}
+                 {{#each july_charges}} <td>{{this.v_july_charges}}</td> {{/each}}
+                 {{#each august_charges}} <td>{{this.v_august_charges}}</td> {{/each}}
+                 {{#each september_charges}} <td>{{this.v_september_charges}}</td> {{/each}}
+                 {{#each october_charges}} <td>{{this.v_october_charges}}</td> {{/each}}
+                 {{#each november_charges}} <td>{{this.v_november_charges}}</td> {{/each}}
+                 {{#each december_charges}} <td>{{this.v_december_charges}}</td> {{/each}}
+                
+                <hr>
+              </tr>
+
+              <tr>
+                <hr>
+                <td>Income</td>
+                 {{#each january_income}} <td>{{this.v_january_sum}}</td> {{/each}}
+                 {{#each february_income}} <td>{{this.v_february_sum}}</td> {{/each}}
+                 {{#each march_income}} <td>{{this.v_march_sum}}</td> {{/each}}
+                 {{#each april_income}} <td>{{this.v_april_sum}}</td> {{/each}}
+                 {{#each may_income}} <td>{{this.v_may_sum}}</td> {{/each}}
+                 {{#each june_income}} <td>{{this.v_june_sum}}</td> {{/each}}
+                 {{#each july_income}} <td>{{this.v_july_sum}}</td> {{/each}}
+                 {{#each august_income}} <td>{{this.v_august_sum}}</td> {{/each}}
+                 {{#each september_income}} <td>{{this.v_september_sum}}</td> {{/each}}
+                 {{#each october_income}} <td>{{this.v_october_sum}}</td> {{/each}}
+                 {{#each november_income}} <td>{{this.v_november_sum}}</td> {{/each}}
+                 {{#each december_income}} <td>{{this.v_december_sum}}</td> {{/each}}
+                
+                <hr>
+              </tr>
+              <tr></tr>
+              <tr></tr>
+              <tr>
+                </br>
+                </br>
+                </br>
+                </br>
+                <td>Income</td> 
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Charges</td>
+              </tr>
+              <tr>
+
+                {{#each total_income}}
+                <td><a href="/get-income-payments" class="btn btn-danger btn-sm">{{this.total_income}}</a> </td>
+                 {{/each}}
+                 <td></td>
+                 {{#each income_breakdown}}
+                <p>{{this.contract_type}} {{this.income}}</p>
+                <p>{{this.firstname}} {{this.month}}</p>
+                 {{/each}}
+
+                <td></td>
+                <td></td>
+                <td></td>
+
+                {{#each total_charges}}
+                <td><a href="/get-charges-payments" class="btn btn-danger btn-sm">{{this.v_total_charges}}</a></td>
+                {{/each}}
+                 <td></td>
+                 </br>
+                 </br>
+                 {{#each charges_breakdown}}
+                 <p>Charges {{this.charges}}</p>
+                 <p>Real Properties {{this.month}}</p>
+                 {{/each}}
+                  
+
+              </tr>
+</br>
+</br>
+              {{#each income}}
+       <p>{{this.contract_type}} {{this.income}}</p>
+       <p>{{this.firstname}} {{this.month}}</p>
+       </br>
+              {{/each}}
+</br>
+</br>
+               {{#each charges}}
+       <p>Charges {{this.charges}}</p>
+       <p>Real Properties {{this.month}}</p>
+       </br>
+              {{/each}}
+      
+ 
+  </table>
+
+  </br>
+
+</div>

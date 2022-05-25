@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title> test </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+    <body>
+        <form action="/submit-new-message/{{id}}" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                                
+         
+                <br/>
+                <label for="receipient">To: </label>
+                 <br/>
+                <input type="text" id="receipient" name="receipient"  />
+                <br/>
+
+                <label for="title">Title: </label>
+                 <br/>
+                <input type="text" id="title" name="title"  />
+
+                <br/>
+                <label for="message">Message: </label>
+                <br/>
+                <input type="text" id="message" name="message"  />
+                <br/>
+                
+                <label for="message">Message: </label>
+                <br/>
+                <input type="file" name="message_upload"/>
+                <br/>
+                <input type="submit" value="Send" />
+                <br/>
+               
+            </fieldset>
+        </form>
+    </body>
+</html>

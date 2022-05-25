@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title> test </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+    <body>
+        <form action="/new-referral-submission" method="POST">
+            <fieldset>
+                                
+                <br/>
+                <label for="title">To: </label>
+                <br/>
+                <input type="text" id="recepient" name="recepient"  />
+                <br/>
+                <label for="Importance">From: </label>
+                 <br/>
+                <input type="text" id="requester" name="requester" value="{{email}}" />
+                <br/>
+                <label for="text">Subject: </label>
+                <br/>
+                 {{#each data}}
+                <input type="text" id="subject" name="subject"  value="Referral Invitation by {{this.name}}"/>
+                {{/each}}
+                <br/>
+                <label for="text">Message: </label>
+                <br/>
+                <textarea id="message" name="message" rows="4" cols="50" 
+                value=" Hello, have been invited to join Real Properties as a Landlord. Click 
+https://app.realproperties.com/#/tenant/signup/apply/126 to signup at the website,">Hello, have been invited to join Real Properties as a Landlord. Click 
+https://app.realproperties.com/#/tenant/signup/apply/126 to signup at the website,  
+                </textarea>
+                <br/>
+                <input type="submit" value="Send" />
+                <br/>
+               
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title> test </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+    <body>
+        <form action="/verify/{{email}}" method="POST">
+            <fieldset>
+                 <p>{{message1}}</p>
+                 <p>{{message2}}</p>
+                 <br/>
+                <label for="secret">Key: </label>
+                <br/>
+                <input type="number" id="secret" name="secret"  />
+                <br/>
+                <input type="submit" value="Verify" />
+                <br/>
+                <p>Use the link below to request for a new verifcation code.</p>
+                <br/>
+                <a href="/resend-form-undeleted/{{email}}" class="btn btn-info btn-sm">Request new key</a>
+               
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+h1{
+    color : Orange;
+}
+
+img{
+    width: 250px;
+}
+
+body{
+    color: #333333;
+    font-family: Arial;
+    max-width: 650px;
+    margin: 0 auto;
+}

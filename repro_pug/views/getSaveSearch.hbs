@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<div class="container">
+  <h1>SAVED SEARCH</h1>
+  <h2>{{title}}</h2>
+  <a href="/" class="btn btn-success">Home</a>
+  <br /><br />
+  <table class="table">
+    <tr>
+      <th>Saved Search</th>
+      <th>Date Added</th>
+      <th>Edit</th>
+      <th>Delete All</th>
+  
+    </tr>
+    {{#each data}}
+      <tr>
+      
+        <td> <a href="/retreive-search/{{this.search_id}}" >{{this.description}} </a></td>
+        <td>{{this.search_date}}</td>
+        <td> <a href="/edit-save-name/{{this.search_id}}" class="btn btn-info btn-sm">Edit</a> </td>
+        <td> <a href="/delete/{{this.search_id}}" class="btn btn-danger btn-sm">Delete</a> </td>
+        
+      </tr>
+    {{/each}}
+  </table>
+</div>

@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+
+   
+     <form action="/new-referrals" method="GET">
+     
+            <fieldset>
+ 
+                <br/>
+                <input type="submit" value="New Referrals" />
+                <br/>
+               
+            </fieldset>
+            
+        </form>
+        
+</head>
+
+<div class="container">
+  <h1>REFERRALS LIST</h1>
+  <h2></h2>
+
+        </br>
+        </br>
+        </br>
+       {{#each data}}
+      <p><b>TO:{{this.receipient}}</b>                    ON         {{this.date_sent}}</p>
+      
+      <p><b>{{this.subject}}</b> </p>
+      
+      <p>{{this.message}}</p>
+      {{/each}}
+       
+
+</div>

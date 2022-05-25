@@ -1,0 +1,20 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    {{#each data}}
+     <form action="/save-name/{{max_id}}" method="POST">
+     
+            <fieldset>
+                <br/>
+                 <label for="search_name">Name Search: </label>
+                <br/>
+                <input type="text" id="search_name" name="search_name"  />
+                <br/>
+                <br/>
+                <br/>
+                <input type="submit" value="Save Search" />
+                <br/>
+            </fieldset>
+            
+        </form>
+        {{/each}}
+</head>

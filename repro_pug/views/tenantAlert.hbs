@@ -1,0 +1,54 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+<h1>TENANT ALERT</h1>
+  <h2></h2>
+   
+     <form action="/get-tenant-alert-details" method="GET">
+     
+            <fieldset>
+                
+                <p>
+  <label>Properties:</label>
+  
+  <select name="property_id"> 
+      {{#each data                                                                                                                                                                                                                                                                                                                                                           }} 
+    <option value={{this.id}}>{{this.address}}</option> 
+    {{/each}}   
+  </select>
+  
+</p>
+ 
+                <br/>
+                <input type="submit" value="Check Alerts" />
+                <br/>
+               
+            </fieldset>
+            
+        </form>
+        
+</head>
+
+<div class="container">
+  
+ 
+      {{#each property_info}}
+       <p>{{this.property_name}}</p>
+             <p>{{this.address}}</p>
+             </br>
+       <p><img src = {{this.picture}}></p>
+       {{/each}}
+</br>
+</br>
+       {{#each likes}}
+       <p>{{this.likes}} LIKES</p>
+       {{/each}}
+
+</br>
+</br>
+       {{#each views}}
+       <p>{{this.views}} VIEWS</p>
+       {{/each}}       
+   
+
+
+</div>      

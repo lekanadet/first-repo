@@ -1,0 +1,41 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<p>{{name}}</p>
+<a href="/" class="btn btn-success">Home</a>
+<p><a href="/landlord-home">Landlord Home</a></p>
+<p><a href="/listing">Listing</a></p>
+<p><a href="/get-message">Message</a></p>
+<p><a href="/tenant-alert">Tenant Alert</a></p>
+<p><a href="/get-landlord-maintainance">Maintainance</a></p>
+<p><a href="/referrals">Referrals</a></p>
+<p><a href="/landlord-account-profile">Account Profile</a></p>
+<p><a href="/get-landlord-payments">Landlord Payments</a></p>
+<p><a href="/get-payment-charts">Payment Charts</a></p>
+<p><a href="/log-out">log out</a></p>
+<div class="container">
+  <h1>LANDLORD HOMEPAGE</h1>
+  <h2></h2>
+  
+  <br /><br />
+   <br /><br />
+   <table class="table">
+  
+       {{#each data}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.price}}</td>
+                <td><img src ={{this.picture}}></td>
+                <td>{{this.town}}</td>
+                <td>{{this.street}}</td>
+                <td>{{this.bed}}</td>
+                <td>{{this.bath}}</td>
+                <td> <a href="/favorited/{{this.id}}" class="btn btn-info btn-sm">like</a></td>
+                <td> <a href="/view-property/{{this.id}}" class="btn btn-info btn-sm">view</a></td>
+            </tr>
+        {{/each}}
+ 
+  </table>
+
+  
+</div>

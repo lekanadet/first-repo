@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<div class="container">
+  <h1>{{title}}</h1>
+  <hr />
+  <div class="row">
+    <div class="col-md-6">
+        {{#each data}}
+      <form action="/edit/{{this.search_id}}" method="post">
+          <div class="form-group">
+              <input type="text" name="search_name" class="form-control" value={{this.search_name}}/>
+          </div>
+          <div class="form-group">
+              <button class="btn btn-info">Save Name</button>
+          </div>
+      </form>
+      {{/each}}
+    </div>
+  </div>
+</div>
