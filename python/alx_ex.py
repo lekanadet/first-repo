@@ -1,5 +1,5 @@
 how_many_snakes = 1
-too_many_sankes = 90
+too_many_snakes = 90
 snake_string = """
 Welcome to Python3!
 
@@ -15,4 +15,4 @@ Welcome to Python3!
 
 
 print(snake_string * how_many_snakes)
-print(too_many_sankes)
+print(too_many_snakes)
